@@ -1,3 +1,4 @@
+import time
 from .base_methods import BaseMethods
 from .locators import CommonButtons, Desktop
 import allure
@@ -17,3 +18,14 @@ class DevicePage(BaseMethods):
         """
         self.swipe_by_element(Desktop.content, direction)
 
+    @allure.step('Цикличное переключение на другой экран и обратно')
+    def cycle_swipe_desktop(self, repetition: int = 1, period: int = 0) -> None:
+        """
+        Цикличное переключение на другой экран и обратно
+        :param repetition: Количество повторений
+        :param period: Количество секунд между повторением
+        """
+        for i in range(repetition):
+            self.swipe_desktop(direction=1)
+            self.swipe_desktop(direction=-1)
+            time.sleep(period)

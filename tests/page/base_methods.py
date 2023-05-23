@@ -39,7 +39,7 @@ class BaseMethods:
         """
         self.driver.press_keycode(keycode)
 
-    @allure.step('Свайп по коодинатам')
+    @allure.step('Свайп по координатам')
     def swipe_by_coordinates(self, x1: int, y1: int, x2: int, y2: int, duration: int = 0) -> None:
         """
         Свайп по коодинатам
@@ -52,7 +52,7 @@ class BaseMethods:
         """
         self.driver.swipe(x1, y1, x2, y2, duration)
 
-    @allure.step('Свайп по коодинатам элемента')
+    @allure.step('Свайп по координатам элемента')
     def swipe_by_element(self, locator: tuple[str, str], direction: int = 1, deviation_y: int = 0) -> None:
         """
         Свайп по коодинатам элемента

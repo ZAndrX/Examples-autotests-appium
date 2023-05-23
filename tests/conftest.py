@@ -7,7 +7,7 @@ from appium.options.android import UiAutomator2Options
 def driver():
     options = UiAutomator2Options()
     options.platform_name = 'Android'
-    options.udid = '192.168.1.1:5555'
+    options.udid = '192.168.31.60:5555'
     options.newCommandTimeout = 3600
     driver = webdriver.Remote('http://127.0.0.1:4723', options=options)
     driver.unlock()
