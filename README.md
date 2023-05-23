@@ -5,7 +5,10 @@ https://hub.docker.com/r/appium/appium/
 
 ### Для запуска appium сервера можете использовать:
 
- `docker run -d -p 4723:4723 -e REMOTE_ADB=true -e ANDROID_DEVICES=192.168.31.1:5555 -e REMOTE_ADB_POLLING_SEC=60`
+`docker run -d -p 4723:4723 -e REMOTE_ADB=true -e ANDROID_DEVICES=192.168.31.1:5555 -e REMOTE_ADB_POLLING_SEC=60`
+
+### Для настройки окружения используйте:
+`pip install -r requirements.txt`
  
 ### Для запуска тестов используйте:
 
@@ -14,3 +17,7 @@ https://hub.docker.com/r/appium/appium/
 Описание аргументов: <br/>
 `--udid` идентификатор устройства (имя устройства в adb devices) <br/>
 `--url` домен appium сервера
+
+
+### Для сборки отчета allure используйте:
+`allure serve allure_folder`

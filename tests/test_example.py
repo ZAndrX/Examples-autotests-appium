@@ -1,10 +1,11 @@
+import allure
 import pytest
-
 from page.device_page import DevicePage
 
 
-@pytest.mark.parametrize('repetition', [5])
-def test_connect(driver, repetition):
+@allure.title('Проверка смены рабочего стола')
+@pytest.mark.parametrize('repetition', [5, 2])
+def test_change_desktop(driver, repetition):
     """
         Нажать кнопку home;
         Свайпнуть экран влево-вправо;
